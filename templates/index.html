@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat en Tiempo Real</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <div class="title-container">
+        <h1>Chat en Tiempo Real</h1>
+    </div>
+    <div class="container">
+        <!-- Formulario para ingresar el nombre de usuario -->
+        <div id="username-form">
+            <h2>Ingresa tu nombre de usuario</h2>
+            <input type="text" id="username" placeholder="Nombre de Usuario">
+            <button id="join-button">Unirse</button>
+        </div>
+
+        <!-- Contenedor del chat (inicialmente oculto hasta que el usuario se una) -->
+        <div id="chat-container" style="display: none;">
+            <h2>Chat</h2>
+            <ul id="chat-messages"></ul>
+            <input type="text" id="message-input" placeholder="Escribe un mensaje">
+            <button id="send-button">Enviar</button>
+        </div>
+    </div>
+</body>
+
+</html>
